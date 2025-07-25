@@ -8,4 +8,4 @@ session = async_sessionmaker(engine, expire_on_commit=False)
 
 async def get_session() -> AsyncSession:
     async with session() as se:
-        yield session
+        yield se
